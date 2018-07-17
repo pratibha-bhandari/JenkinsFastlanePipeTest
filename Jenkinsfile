@@ -21,8 +21,8 @@ node {
     stage('build') {
         // Build
 sh 'security list-keychains'
-sh 'security unlock-keychain -p niit@123 ${HOME}/Library/Keychains/login.keychain'
-sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 login.keychain'
+sh 'security unlock-keychain -p niit@123 /Users/Shared/Jenkins/Documents/jenkins.keychain'
+sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 /Users/Shared/Jenkins/Documents/jenkins.keychain'
 //sh 'security unlock-keychain -p niit@123 ${HOME}/Library/Keychains/login.keychain'
 //sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 login.keychain'
 sh 'security import /Users/Shared/Jenkins/Downloads/Appstore_Certificates.p12 -k $/Users/Shared/Jenkins/Documents/jenkins.keychain -P niit@123 -A'
