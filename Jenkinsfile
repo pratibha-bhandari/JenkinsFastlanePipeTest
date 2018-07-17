@@ -36,14 +36,14 @@ sh '/usr/bin/xcodebuild -scheme JenkinsFastlanePipeTest -configuration Release c
 sh '/usr/bin/xcodebuild -exportArchive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive -exportPath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build -exportOptionsPlist /Users/Shared/Jenkins/Home/workspace/z_citest/developmentUAWU67869TExport.plist'
     }
 
-    /*stage('fastlane') {
+    stage('fastlane') {
         sh 'whereis fastlane'
 
         dir ('/Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub') {
             fastlane("beta")
         }
        //sh 'fastlane("beta")'
-    }*/
+    }
 
     stage('test') {
         //testing
