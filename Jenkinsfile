@@ -20,7 +20,7 @@ node {
 
     stage('build') {
         // Build
-sh 'security set-key-partition-list'
+sh 'security list-keychains'
 sh 'security unlock-keychain -p niit@123 ${HOME}/Library/Keychains/login.keychain'
 sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 login.keychain'
 //sh 'security unlock-keychain -p niit@123 ${HOME}/Library/Keychains/login.keychain'
