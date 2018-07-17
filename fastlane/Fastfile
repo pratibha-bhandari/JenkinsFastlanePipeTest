@@ -19,11 +19,6 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
     setup_jenkins
-    unlock_keychain( # Unlock an existing keychain and add it to the keychain search list
-        path: "/Users/pratibha/Library/Keychains/login.keychain-db",
-        password: "niit@123",
-        set_default: true
-    )
     build_app(
         scheme: "JenkinsFastlanePipeTest",
         export_method: "app-store",
