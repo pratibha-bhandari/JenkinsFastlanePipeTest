@@ -20,8 +20,9 @@ node {
 
     /*stage('build') {
         // Build
-sh 'security unlock-keychain -p niit@123 ${HOME}/Library/Keychains/login.keychain'
-sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 login.keychain'
+//sh 'security unlock-keychain -p niit@123 ${HOME}/Library/Keychains/login.keychain'
+//sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 login.keychain'
+sh 'security import /Users/Shared/Jenkins/Downloads/Appstore_Certificates.p12 -k $/Users/Shared/Jenkins/Documents/jenkins.keychain -P niit@123 -A'
 //&& codesign --force --verify --verbose --sign
         //sh 'security unlock-keychain -p "niit@123" ${HOME}/Library/Keychains/login.keychain'
 
@@ -36,7 +37,7 @@ sh '/usr/bin/xcodebuild -exportArchive -archivePath /Users/Shared/Jenkins/Home/w
         sh 'whereis fastlane'
 
         dir ('/Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub') {
-            fastlane("custom")
+            fastlane("beta")
         }
        //sh 'fastlane("beta")'
     }
