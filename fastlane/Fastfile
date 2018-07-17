@@ -31,7 +31,8 @@ platform :ios do
             provisioningProfiles: {
                 "com.dbsystel.JenkinsFastlanePipeTest" => "JenkinsFastlanePipeTestPratibha.mobileprovision",
             }
-        },
+        }
+    )
     upload_to_testflight
   end
 end
