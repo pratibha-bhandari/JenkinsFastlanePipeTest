@@ -19,6 +19,11 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
     setup_jenkins
+    unlock_keychain( # Unlock an existing keychain and add it to the keychain search list
+        path: "/Users/Shared/Jenkins/Library/Keychains/login.keychain",
+        password: "niit@123"
+    )
+    unlock_keychain(path: "login.keychain", password: options[:keychain_password])
     build_app(
         scheme: "JenkinsFastlanePipeTest",
         export_method: "app-store",
@@ -26,7 +31,8 @@ platform :ios do
             provisioningProfiles: {
                 "com.dbsystel.JenkinsFastlanePipeTest" => "JenkinsFastlanePipeTestPratibha.mobileprovision",
             }
-        })
+        },
+    xcode_path: "/Applications/Xcode_9.4.app")
     upload_to_testflight
   end
 end
