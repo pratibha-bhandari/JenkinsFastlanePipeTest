@@ -28,7 +28,7 @@ platform :ios do
                 "com.dbsystel.JenkinsFastlanePipeTest" => "JenkinsFastlanePipeTestPratibha.mobileprovision",
             }
         },
-    xcode_path: "/Applications/Xcode_9.4.app")
+    )
     upload_to_testflight
   end
 end
