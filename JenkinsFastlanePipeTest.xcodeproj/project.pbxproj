@@ -14,6 +14,10 @@
 		E7775C1C20FCAE9E007C1F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7775C1A20FCAE9E007C1F3C /* LaunchScreen.storyboard */; };
 		E7775C2720FCAE9E007C1F3C /* JenkinsFastlanePipeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7775C2620FCAE9E007C1F3C /* JenkinsFastlanePipeTestTests.swift */; };
 		E7775C3220FCAE9E007C1F3C /* JenkinsFastlanePipeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7775C3120FCAE9E007C1F3C /* JenkinsFastlanePipeTestUITests.swift */; };
+		E7775C7120FD981E007C1F3C /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = E7775C6D20FD981E007C1F3C /* Appfile */; };
+		E7775C7220FD981E007C1F3C /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = E7775C6E20FD981E007C1F3C /* Fastfile */; };
+		E7775C7320FD981E007C1F3C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E7775C6F20FD981E007C1F3C /* README.md */; };
+		E7775C7420FD981E007C1F3C /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = E7775C7020FD981E007C1F3C /* report.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		E7775C2D20FCAE9E007C1F3C /* JenkinsFastlanePipeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JenkinsFastlanePipeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7775C3120FCAE9E007C1F3C /* JenkinsFastlanePipeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JenkinsFastlanePipeTestUITests.swift; sourceTree = "<group>"; };
 		E7775C3320FCAE9E007C1F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7775C6D20FD981E007C1F3C /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
+		E7775C6E20FD981E007C1F3C /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		E7775C6F20FD981E007C1F3C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E7775C7020FD981E007C1F3C /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		E7775C0520FCAE9D007C1F3C = {
 			isa = PBXGroup;
 			children = (
+				E7775C6C20FD981E007C1F3C /* fastlane */,
 				E7775C1020FCAE9E007C1F3C /* JenkinsFastlanePipeTest */,
 				E7775C2520FCAE9E007C1F3C /* JenkinsFastlanePipeTestTests */,
 				E7775C3020FCAE9E007C1F3C /* JenkinsFastlanePipeTestUITests */,
@@ -123,6 +132,17 @@
 				E7775C3320FCAE9E007C1F3C /* Info.plist */,
 			);
 			path = JenkinsFastlanePipeTestUITests;
+			sourceTree = "<group>";
+		};
+		E7775C6C20FD981E007C1F3C /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				E7775C6D20FD981E007C1F3C /* Appfile */,
+				E7775C6E20FD981E007C1F3C /* Fastfile */,
+				E7775C6F20FD981E007C1F3C /* README.md */,
+				E7775C7020FD981E007C1F3C /* report.xml */,
+			);
+			path = fastlane;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,11 +213,11 @@
 				TargetAttributes = {
 					E7775C0D20FCAE9E007C1F3C = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					E7775C2120FCAE9E007C1F3C = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = E7775C0D20FCAE9E007C1F3C;
 					};
 					E7775C2C20FCAE9E007C1F3C = {
@@ -232,7 +252,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7775C7320FD981E007C1F3C /* README.md in Resources */,
+				E7775C7220FD981E007C1F3C /* Fastfile in Resources */,
+				E7775C7120FD981E007C1F3C /* Appfile in Resources */,
 				E7775C1C20FCAE9E007C1F3C /* LaunchScreen.storyboard in Resources */,
+				E7775C7420FD981E007C1F3C /* report.xml in Resources */,
 				E7775C1920FCAE9E007C1F3C /* Assets.xcassets in Resources */,
 				E7775C1720FCAE9E007C1F3C /* Main.storyboard in Resources */,
 			);
@@ -426,11 +450,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = UAWU67869T;
 				INFOPLIST_FILE = JenkinsFastlanePipeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "29f7dae1-8a2c-4789-bd6a-397df55eb529";
+				PROVISIONING_PROFILE_SPECIFIER = JenkinsFastlanePipeTestPratibha;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,11 +468,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = UAWU67869T;
 				INFOPLIST_FILE = JenkinsFastlanePipeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "29f7dae1-8a2c-4789-bd6a-397df55eb529";
+				PROVISIONING_PROFILE_SPECIFIER = JenkinsFastlanePipeTestPratibha;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,11 +487,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = UAWU67869T;
 				INFOPLIST_FILE = JenkinsFastlanePipeTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JenkinsFastlanePipeTest.app/JenkinsFastlanePipeTest";
@@ -471,11 +505,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = UAWU67869T;
 				INFOPLIST_FILE = JenkinsFastlanePipeTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JenkinsFastlanePipeTest.app/JenkinsFastlanePipeTest";
@@ -487,6 +523,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UAWU67869T;
 				INFOPLIST_FILE = JenkinsFastlanePipeTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTestUITests;
@@ -502,6 +539,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UAWU67869T;
 				INFOPLIST_FILE = JenkinsFastlanePipeTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTestUITests;

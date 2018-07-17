@@ -1,0 +1,8 @@
+app_identifier("com.dbsystel.JenkinsFastlanePipeTest") # The bundle identifier of your app
+apple_id("parijat.chandra@niit-tech.com") # Your Apple email address
+
+itc_team_id("119164200") # App Store Connect Team ID
+team_id("UAWU67869T") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
