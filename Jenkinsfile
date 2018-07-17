@@ -18,7 +18,7 @@ node {
         ])
     }
 
-    /*stage('build') {
+    stage('build') {
         // Build
 sh 'security set-key-partition-list'
 sh 'security unlock-keychain -p niit@123 ${HOME}/Library/Keychains/login.keychain'
@@ -34,16 +34,16 @@ sh 'security import /Users/Shared/Jenkins/Downloads/Appstore_Certificates.p12 -k
 sh '/usr/bin/xcodebuild -scheme JenkinsFastlanePipeTest -configuration Release clean build archive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive DEVELOPMENT_TEAM=UAWU67869T'
 
 sh '/usr/bin/xcodebuild -exportArchive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive -exportPath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build -exportOptionsPlist /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/developmentUAWU67869TExport.plist'
-    }*/
+    }
 
-    stage('fastlane') {
+    /*stage('fastlane') {
         sh 'whereis fastlane'
 
         dir ('/Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub') {
             fastlane("beta")
         }
        //sh 'fastlane("beta")'
-    }
+    }*/
 
     stage('test') {
         //testing
