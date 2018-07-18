@@ -21,6 +21,11 @@ or alternatively using `brew cask install fastlane`
 fastlane ios beta
 ```
 Push a new beta build to TestFlight
+### ios custom
+```
+fastlane ios custom
+```
+Generate new localized screenshots
 
 ----
 
