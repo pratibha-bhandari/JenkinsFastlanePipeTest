@@ -64,8 +64,8 @@ sh '/usr/bin/xcodebuild -exportArchive -archivePath /Users/Shared/Jenkins/Home/w
 def fastlane(lane) {
     def env = [
         "PATH+LOCAL=/usr/local/bin/",
-        "http_proxy=http://dmzproxy.tech.rz.db.de:8080",
-        "https_proxy=http://dmzproxy.tech.rz.db.de:8080",
+        //"http_proxy=http://dmzproxy.tech.rz.db.de:8080",
+        //"https_proxy=http://dmzproxy.tech.rz.db.de:8080",
         "LC_ALL=en_US.UTF-8",
         "LANG=en_US.UTF-8",
         "FASTLANE_EXPLICIT_OPEN_SIMULATOR=2"
