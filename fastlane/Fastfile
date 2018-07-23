@@ -31,11 +31,11 @@ platform :ios do
 #upload_to_testflight
   end
 
-desc "Generate new localized screenshots"
-lane :custom do
-get_certificates
-get_provisioning_profile
-build_app
-upload_to_testflight
-end
+    desc "Generate new localized screenshots"
+    lane :custom do
+        get_certificates
+        get_provisioning_profile
+        build_app
+        upload_to_testflight
+    end
 end
