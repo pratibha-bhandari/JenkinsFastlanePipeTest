@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E70D3B5F20FDB81400F3D4E9 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = E70D3B5E20FDB81400F3D4E9 /* Gemfile */; };
+		E71BB1E821059BA400924B4C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E71BB1E721059BA400924B4C /* README.md */; };
 		E7775C1220FCAE9E007C1F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7775C1120FCAE9E007C1F3C /* AppDelegate.swift */; };
 		E7775C1420FCAE9E007C1F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7775C1320FCAE9E007C1F3C /* ViewController.swift */; };
 		E7775C1720FCAE9E007C1F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7775C1520FCAE9E007C1F3C /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		E70D3B5E20FDB81400F3D4E9 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		E71BB1E721059BA400924B4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E7775C0E20FCAE9E007C1F3C /* JenkinsFastlanePipeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsFastlanePipeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7775C1120FCAE9E007C1F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7775C1320FCAE9E007C1F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		E7775C0520FCAE9D007C1F3C = {
 			isa = PBXGroup;
 			children = (
+				E71BB1E721059BA400924B4C /* README.md */,
 				E70D3B5E20FDB81400F3D4E9 /* Gemfile */,
 				E7775C7520FD9A12007C1F3C /* Jenkinsfile */,
 				E7775C6C20FD981E007C1F3C /* fastlane */,
@@ -260,6 +263,7 @@
 			files = (
 				E70D3B5F20FDB81400F3D4E9 /* Gemfile in Resources */,
 				E7775C7320FD981E007C1F3C /* README.md in Resources */,
+				E71BB1E821059BA400924B4C /* README.md in Resources */,
 				E7775C7220FD981E007C1F3C /* Fastfile in Resources */,
 				E7775C7120FD981E007C1F3C /* Appfile in Resources */,
 				E7775C1C20FCAE9E007C1F3C /* LaunchScreen.storyboard in Resources */,
