@@ -28,6 +28,7 @@ platform :ios do
             }
         }
     )
-    upload_to_testflight
+#upload_to_testflight
+    pilot(skip_submission:true,distribute_external:true,skip_waiting_for_build_processing:true)
   end
 end
