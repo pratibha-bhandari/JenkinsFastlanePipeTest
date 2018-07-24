@@ -16,18 +16,24 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Push a new beta build to TestFlight"
-  lane :beta do
-    setup_jenkins
-    build_app(
-        scheme: "JenkinsFastlanePipeTest",
-        export_method: "app-store",
-        export_options: {
-            provisioningProfiles: {
-                "com.dbsystel.JenkinsFastlanePipeTest" => "JenkinsFastlanePipeTestPratibha.mobileprovision",
+
+    desc "Runs all the tests"
+    lane :test do
+        scan
+    end
+
+    desc "Push a new beta build to TestFlight"
+    lane :beta do
+        setup_jenkins
+        build_app(
+            scheme: "JenkinsFastlanePipeTest",
+            export_method: "app-store",
+            export_options: {
+                provisioningProfiles: {
+                    "com.dbsystel.JenkinsFastlanePipeTest" => "JenkinsFastlanePipeTestPratibha.mobileprovision",
+                }
             }
-        }
-    )
+        )
 #upload_to_testflight
 #pilot(
 #changelog: "release notes",
