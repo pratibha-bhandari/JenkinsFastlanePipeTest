@@ -41,20 +41,23 @@ platform :ios do
 
     after_all do |lane|
     # This block is called, only if the executed lane was successful
-
-     slack(
-#slack_url: "https://hooks.slack.com/services/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",
-        channel: "jenkinspipelineapp",
-        message: "Successfully deployed new App Update."
-     )
+        if ENV["SLACK_URL"]
+            slack(
+                #slack_url: "https://hooks.slack.com/services/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",
+                channel: "jenkinspipelineapp",
+                message: "Successfully deployed new App Update."
+            )
+        end
     end
 
     error do |lane, exception|
-     slack(
-#slack_url: "https://hooks.slack.com/services/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",
-        message: exception.message,
-        success: false
-     )
+        if ENV["SLACK_URL"]
+            slack(
+                #slack_url: "https://hooks.slack.com/services/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",
+                message: exception.message,
+                success: false
+            )
+        end
     end
 
     def run_tests
