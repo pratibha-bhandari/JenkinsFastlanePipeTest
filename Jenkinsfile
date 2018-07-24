@@ -23,18 +23,11 @@ node {
 sh 'security list-keychains'
 sh 'security unlock-keychain -p niit@123 /Users/Shared/Jenkins/Documents/jenkins.keychain'
 sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 /Users/Shared/Jenkins/Documents/jenkins.keychain'
-//sh 'security unlock-keychain -p niit@123 ${HOME}/Library/Keychains/login.keychain'
-//sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 login.keychain'
-//sh 'security import /Users/Shared/Jenkins/Downloads/Appstore_Certificates.p12 -k $/Users/Shared/Jenkins/Documents/jenkins.keychain -P niit@123 -A'
-//&& codesign --force --verify --verbose --sign
-        //sh 'security unlock-keychain -p "niit@123" ${HOME}/Library/Keychains/login.keychain'
 
-        //sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 login.keychain'
+//sh '/usr/bin/xcodebuild -scheme JenkinsFastlanePipeTest -configuration Release clean build archive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive DEVELOPMENT_TEAM=UAWU67869T'
 
-sh '/usr/bin/xcodebuild -scheme JenkinsFastlanePipeTest -configuration Release clean build archive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive DEVELOPMENT_TEAM=UAWU67869T'
-
-sh '/usr/bin/xcodebuild -exportArchive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive -exportPath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build -exportOptionsPlist /Users/Shared/Jenkins/Home/workspace/z_citest/developmentUAWU67869TExport.plist'
-    }
+//sh '/usr/bin/xcodebuild -exportArchive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive -exportPath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build -exportOptionsPlist /Users/Shared/Jenkins/Home/workspace/z_citest/developmentUAWU67869TExport.plist'
+}
 
     stage('fastlane') {
         sh 'whereis fastlane'
