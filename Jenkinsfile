@@ -68,7 +68,8 @@ def fastlane(lane) {
         //"https_proxy=http://dmzproxy.tech.rz.db.de:8080",
         "LC_ALL=en_US.UTF-8",
         "LANG=en_US.UTF-8",
-        "FASTLANE_EXPLICIT_OPEN_SIMULATOR=2"
+        "FASTLANE_EXPLICIT_OPEN_SIMULATOR=2",
+        "SLACK_URL=https://hooks.slack.com/services/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"
     ]
 
     withEnv(env) {
