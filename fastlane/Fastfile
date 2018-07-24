@@ -17,13 +17,15 @@ default_platform(:ios)
 
 platform :ios do
 
+
     desc "Runs all the tests"
     lane :test do
         scan
     end
 
-    desc "Push a new beta build to TestFlight"
-    lane :beta do
+
+    desc "Build app for beta distribution"
+    lane :build do
         setup_jenkins
         build_app(
             scheme: "JenkinsFastlanePipeTest",
@@ -34,14 +36,19 @@ platform :ios do
                 }
             }
         )
-#upload_to_testflight
-#pilot(
-#changelog: "release notes",
-#skip_submission:true,
-#distribute_external:true,
-#skip_waiting_for_build_processing:true
-#)
-  end
+    end
+
+
+    desc "Push a new beta build to TestFlight"
+    lane :beta do
+        upload_to_testflight
+        #pilot(
+            #changelog: "release notes",
+            #skip_submission:true,
+            #distribute_external:true,
+            #skip_waiting_for_build_processing:true
+        #)
+    end
 
 # You can define as many lanes as you want
 
@@ -65,22 +72,5 @@ platform :ios do
             )
         end
     end
-
-    def run_tests
-        for scheme in ['JenkinsFastlanePipeTest', 'JenkinsFastlanePipeTestTests']
-            xctest(
-                scheme: scheme,
-                destination: 'platform=iOS Simulator,name=iPhone 6',
-                reports: [
-                    {
-                        report: "junit",
-                        output: "build/reports/#{scheme}-tests.xml"
-                    }
-                ],
-                clean: nil,
-                derivedDataPath: './build',
-            )
-        end
-end
 
 end

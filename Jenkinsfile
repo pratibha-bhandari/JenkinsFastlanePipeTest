@@ -20,16 +20,23 @@ node {
 
     stage('build') {
         // Build
-sh 'security list-keychains'
-sh 'security unlock-keychain -p niit@123 /Users/Shared/Jenkins/Documents/jenkins.keychain'
-sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 /Users/Shared/Jenkins/Documents/jenkins.keychain'
+        sh 'security list-keychains'
+        sh 'security unlock-keychain -p niit@123 /Users/Shared/Jenkins/Documents/jenkins.keychain'
+        sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@123 /Users/Shared/Jenkins/Documents/jenkins.keychain'
 
-//sh '/usr/bin/xcodebuild -scheme JenkinsFastlanePipeTest -configuration Release clean build archive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive DEVELOPMENT_TEAM=UAWU67869T'
+        //sh '/usr/bin/xcodebuild -scheme JenkinsFastlanePipeTest -configuration Release clean build archive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive DEVELOPMENT_TEAM=UAWU67869T'
 
-//sh '/usr/bin/xcodebuild -exportArchive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive -exportPath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build -exportOptionsPlist /Users/Shared/Jenkins/Home/workspace/z_citest/developmentUAWU67869TExport.plist'
-}
+        //sh '/usr/bin/xcodebuild -exportArchive -archivePath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build/Release-iphoneos/JenkinsFastlanePipeTest.xcarchive -exportPath /Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub/build -exportOptionsPlist /Users/Shared/Jenkins/Home/workspace/z_citest/developmentUAWU67869TExport.plist'
+        fastlane("build")
+    }
 
-    stage('fastlane') {
+    stage('testflight') {
+        dir ('/Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub') {
+            fastlane("beta")
+        }
+    }
+
+    /*stage('fastlane') {
         sh 'whereis fastlane'
 
         dir ('/Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub') {
@@ -37,7 +44,7 @@ sh 'security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k niit@1
             fastlane("beta")
         }
        //sh 'fastlane("beta")'
-    }
+    }*/
 
     stage('test') {
         //testing
