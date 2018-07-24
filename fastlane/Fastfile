@@ -44,7 +44,7 @@ platform :ios do
 
      slack(
         SLACK_URL: "https://hooks.slack.com/services/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",
-        channel: "jenkinspipelineapp"
+        channel: "jenkinspipelineapp",
         message: "Successfully deployed new App Update."
      )
 end
