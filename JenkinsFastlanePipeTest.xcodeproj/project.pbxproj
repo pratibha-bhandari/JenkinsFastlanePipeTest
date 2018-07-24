@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E70D3B5F20FDB81400F3D4E9 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = E70D3B5E20FDB81400F3D4E9 /* Gemfile */; };
 		E71BB1E821059BA400924B4C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E71BB1E721059BA400924B4C /* README.md */; };
+		E71BB1EA2107228A00924B4C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BB1E92107228A00924B4C /* Car.swift */; };
+		E71BB1EC2107252A00924B4C /* CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BB1EB2107252A00924B4C /* CarTests.swift */; };
 		E7775C1220FCAE9E007C1F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7775C1120FCAE9E007C1F3C /* AppDelegate.swift */; };
 		E7775C1420FCAE9E007C1F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7775C1320FCAE9E007C1F3C /* ViewController.swift */; };
 		E7775C1720FCAE9E007C1F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7775C1520FCAE9E007C1F3C /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		E70D3B5E20FDB81400F3D4E9 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		E71BB1E721059BA400924B4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E71BB1E92107228A00924B4C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		E71BB1EB2107252A00924B4C /* CarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTests.swift; sourceTree = "<group>"; };
 		E7775C0E20FCAE9E007C1F3C /* JenkinsFastlanePipeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsFastlanePipeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7775C1120FCAE9E007C1F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7775C1320FCAE9E007C1F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			children = (
 				E7775C1120FCAE9E007C1F3C /* AppDelegate.swift */,
 				E7775C1320FCAE9E007C1F3C /* ViewController.swift */,
+				E71BB1E92107228A00924B4C /* Car.swift */,
 				E7775C1520FCAE9E007C1F3C /* Main.storyboard */,
 				E7775C1820FCAE9E007C1F3C /* Assets.xcassets */,
 				E7775C1A20FCAE9E007C1F3C /* LaunchScreen.storyboard */,
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				E7775C2620FCAE9E007C1F3C /* JenkinsFastlanePipeTestTests.swift */,
+				E71BB1EB2107252A00924B4C /* CarTests.swift */,
 				E7775C2820FCAE9E007C1F3C /* Info.plist */,
 			);
 			path = JenkinsFastlanePipeTestTests;
@@ -297,6 +303,7 @@
 			files = (
 				E7775C1420FCAE9E007C1F3C /* ViewController.swift in Sources */,
 				E7775C1220FCAE9E007C1F3C /* AppDelegate.swift in Sources */,
+				E71BB1EA2107228A00924B4C /* Car.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71BB1EC2107252A00924B4C /* CarTests.swift in Sources */,
 				E7775C2720FCAE9E007C1F3C /* JenkinsFastlanePipeTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
