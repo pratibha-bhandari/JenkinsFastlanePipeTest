@@ -40,7 +40,7 @@ sh '/usr/bin/xcodebuild -exportArchive -archivePath /Users/Shared/Jenkins/Home/w
         sh 'whereis fastlane'
 
         dir ('/Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub') {
-            fastlane("test")
+            //fastlane("test")
             fastlane("beta")
         }
        //sh 'fastlane("beta")'
