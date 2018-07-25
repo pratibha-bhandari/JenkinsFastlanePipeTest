@@ -26,6 +26,8 @@ platform :ios do
 
     desc "Build app for beta distribution"
     lane :build do
+
+        sh("security unlock-keychain -p niit@123 /Users/Shared/Jenkins/Documents/jenkins.keychain", log: false)
         setup_jenkins
         gym(
             scheme: "JenkinsFastlanePipeTest",
