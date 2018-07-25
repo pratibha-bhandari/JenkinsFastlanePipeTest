@@ -237,7 +237,7 @@
 					};
 					E7775C2C20FCAE9E007C1F3C = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = E7775C0D20FCAE9E007C1F3C;
 					};
 				};
@@ -542,14 +542,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: parijat chandra (FA9KTP7P2G)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = UAWU67869T;
 				INFOPLIST_FILE = JenkinsFastlanePipeTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTestUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "13f5a46b-9e82-4b3d-9dd2-834eea4b7a7b";
+				PROVISIONING_PROFILE_SPECIFIER = JenkinsFastlanePipeTestPratibhaDev;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = JenkinsFastlanePipeTest;
@@ -560,14 +561,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: parijat chandra (FA9KTP7P2G)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = UAWU67869T;
 				INFOPLIST_FILE = JenkinsFastlanePipeTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTestUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbsystel.JenkinsFastlanePipeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "13f5a46b-9e82-4b3d-9dd2-834eea4b7a7b";
+				PROVISIONING_PROFILE_SPECIFIER = JenkinsFastlanePipeTestPratibhaDev;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = JenkinsFastlanePipeTest;
