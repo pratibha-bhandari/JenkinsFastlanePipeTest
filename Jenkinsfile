@@ -10,27 +10,24 @@ node {
     }
 
     stage('test') {
-    //testing
+
+        //testing
         fastlane("test")
     }
 
     stage('build') {
+
         // Build
         fastlane("build")
     }
 
-    stage('testflight') {
-        dir ('/Users/Shared/Jenkins/Home/workspace/JenkinsFastlanePipeTestGithub') {
-            //fastlane("test")
-            fastlane("beta")
-        }
-    }
-
     stage('post-build') {
+
         step([$class: 'JUnitResultArchiver', testResults: '**/output/*.junit'])
     }
 
     stage('archive') {
+
         //Archiving artifacts
         archiveArtifacts '**'
     }
