@@ -7,16 +7,6 @@ node {
 
         // Checkout files.
         checkout scm
-        /*checkout([
-            $class: 'GitSCM',
-            branches: [[name: '*/master']],
-            doGenerateSubmoduleConfigurations: false,
-            extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [],
-            userRemoteConfigs: [[
-                credentialsId: 'fe76b6f7-a7b2-4742-8ccc-62fc02e192c1',
-                url: 'https://github.com/pratibha-bhandari/JenkinsFastlanePipeTest.git'
-            ]]
-        ])*/
     }
 
     stage('build') {
@@ -55,6 +45,21 @@ node {
         //Archiving artifacts
         archiveArtifacts '**'
     }
+//stage('Checkout') {
+
+// Checkout files.
+//checkout scm
+//checkout([
+//$class: 'GitSCM',
+//branches: [[name: '*/master']],
+//doGenerateSubmoduleConfigurations: false,
+//extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [],
+//userRemoteConfigs: [[
+//credentialsId: 'fe76b6f7-a7b2-4742-8ccc-62fc02e192c1',
+//url: 'https://github.com/pratibha-bhandari/JenkinsFastlanePipeTest.git'
+//]]
+//])
+//}
 
 /*stage('build') {
 // Build
